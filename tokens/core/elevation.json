@@ -1,0 +1,27 @@
+{
+  "elevation": {
+    "shadow": {
+      "float": {
+        "color": "#00000080",
+        "dx": 0,
+        "dy": 8,
+        "blur": 24,
+        "spread": -2
+      }
+    },
+    "highlight": {
+      "float": {
+        "color": "#FFFFFF14",
+        "dx": 0,
+        "dy": 0,
+        "blur": 0,
+        "spread": 1
+      }
+    },
+    "scrim": {
+      "modal": {
+        "color": "#00000099"
+      }
+    }
+  }
+}
