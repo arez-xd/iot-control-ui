@@ -1,0 +1,11 @@
+{
+  "elevation": {
+    "floating": {
+      "shadow": "{core.elevation.shadow.float}",
+      "highlight": "{core.elevation.highlight.float}"
+    },
+    "scrim": {
+      "modal": "{core.elevation.scrim.modal}"
+    }
+  }
+}
