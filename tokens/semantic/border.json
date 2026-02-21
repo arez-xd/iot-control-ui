@@ -1,0 +1,11 @@
+{
+  "border": {
+    "width": {
+      "default": "{core.border.width.thin}",
+      "strong": "{core.border.width.medium}"
+    },
+    "style": {
+      "default": "{core.border.style.solid}"
+    }
+  }
+}
