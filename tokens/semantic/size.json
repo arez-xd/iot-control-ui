@@ -1,0 +1,48 @@
+{
+  "size": {
+    "hitArea": {
+      "min": "{core.size.hitArea.min}"
+    },
+
+    "control": {
+      "minHeight": "{core.size.control.height.default}",
+      "compactHeight": "{core.size.control.height.compact}"
+    },
+
+    "button": {
+      "minHeight": "{core.size.control.height.default}",
+      "compactHeight": "{core.size.control.height.compact}",
+      "iconOnly": {
+        "minSize": "{core.size.hitArea.min}"
+      }
+    },
+
+    "field": {
+      "minHeight": "{core.size.control.height.default}",
+      "compactHeight": "{core.size.control.height.compact}"
+    },
+
+    "chip": {
+      "height": "{core.size.chip.height}",
+      "minHeight": "{core.size.chip.height}"
+    },
+
+    "icon": {
+      "xs": "{core.size.icon.xs}",
+      "sm": "{core.size.icon.sm}",
+      "md": "{core.size.icon.md}",
+      "lg": "{core.size.icon.lg}",
+      "xl": "{core.size.icon.xl}"
+    },
+
+    "avatar": {
+      "sm": "{core.size.avatar.sm}",
+      "md": "{core.size.avatar.md}",
+      "lg": "{core.size.avatar.lg}"
+    },
+
+    "divider": {
+      "hairline": "{core.size.divider.hairline}"
+    }
+  }
+}
