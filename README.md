@@ -90,21 +90,21 @@ sibach-design-system/
 │   │
 │   ├── semantic/
 │   │   ├── color.json
-│   │   ├── typography.json
 │   │   ├── space.json
+│   │   ├── typography.json
 │   │   ├── size.json
 │   │   ├── radius.json
-│   │   ├── stroke.json
 │   │   ├── border.json
+│   │   ├── stroke.json
 │   │   └── elevation.json
 │   │
 │   └── build/                    ← Auto-generated artifacts
 │       ├── ios/
 │       │   └── tokens.swift
-│       ├── ts/
-│       │   └── tokens.ts
-│       └── css/
-│           └── tokens.css
+│       └── ts/
+│           └── tokens.ts
+│       
+│           
 │
 ├── docs/
 │   ├── principles.md
