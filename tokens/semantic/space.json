@@ -1,0 +1,35 @@
+{
+  "space": {
+    "inset": {
+      "screen": "{core.space.6}",
+      "sheet": "{core.space.6}",
+      "card": "{core.space.5}",
+      "cell": "{core.space.4}"
+    },
+    "stack": {
+      "xs": "{core.space.2}",
+      "sm": "{core.space.3}",
+      "md": "{core.space.4}",
+      "lg": "{core.space.5}"
+    },
+    "list": {
+      "rowGap": "{core.space.3}",
+      "sectionGap": "{core.space.6}"
+    },
+    "control": {
+      "paddingX": "{core.space.4}",
+      "paddingY": "{core.space.3}",
+      "gap": "{core.space.2}"
+    },
+    "chip": {
+      "paddingX": "{core.space.4}",
+      "paddingY": "{core.space.2}",
+      "gap": "{core.space.2}"
+    },
+    "icon": {
+      "sm": "{core.space.4}",
+      "md": "{core.space.5}",
+      "lg": "{core.space.6}"
+    }
+  }
+}
