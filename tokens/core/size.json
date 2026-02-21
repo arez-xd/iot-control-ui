@@ -1,0 +1,36 @@
+{
+  "size": {
+    "hitArea": {
+      "min": "44px"
+    },
+
+    "control": {
+      "height": {
+        "default": "44px",
+        "compact": "36px"
+      }
+    },
+
+    "chip": {
+      "height": "28px"
+    },
+
+    "icon": {
+      "xs": "12px",
+      "sm": "16px",
+      "md": "20px",
+      "lg": "24px",
+      "xl": "32px"
+    },
+
+    "avatar": {
+      "sm": "28px",
+      "md": "36px",
+      "lg": "44px"
+    },
+
+    "divider": {
+      "hairline": "1px"
+    }
+  }
+}
