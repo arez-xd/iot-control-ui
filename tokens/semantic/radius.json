@@ -1,0 +1,9 @@
+{
+  "radius": {
+    "control": "{core.radius.control}",
+    "card": "{core.radius.card}",
+    "panel": "{core.radius.lg}",
+    "sheet": "{core.radius.xl}",
+    "pill": "{core.radius.full}"
+  }
+}
