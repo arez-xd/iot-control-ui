@@ -1,0 +1,59 @@
+{
+  "stroke": {
+    "width": {
+      "hairline": "{core.stroke.width.hairline}",
+      "default": "{core.stroke.width.default}",
+      "strong": "{core.stroke.width.strong}"
+    },
+
+    "separator": {
+      "default": {
+        "width": "{semantic.stroke.width.hairline}",
+        "color": "{semantic.color.separator.default}"
+      },
+      "strong": {
+        "width": "{semantic.stroke.width.default}",
+        "color": "{semantic.color.separator.strong}"
+      }
+    },
+
+    "control": {
+      "default": {
+        "width": "{semantic.stroke.width.default}",
+        "color": "{semantic.color.separator.default}"
+      },
+      "focused": {
+        "width": "{semantic.stroke.width.default}",
+        "color": "{semantic.color.field.borderFocused}"
+      },
+      "disabled": {
+        "width": "{semantic.stroke.width.default}",
+        "color": "{semantic.color.text.disabled}"
+      }
+    },
+
+    "status": {
+      "success": {
+        "width": "{semantic.stroke.width.default}",
+        "color": "{semantic.color.status.success.border}"
+      },
+      "warning": {
+        "width": "{semantic.stroke.width.default}",
+        "color": "{semantic.color.status.warning.border}"
+      },
+      "error": {
+        "width": "{semantic.stroke.width.default}",
+        "color": "{semantic.color.status.error.border}"
+      },
+      "info": {
+        "width": "{semantic.stroke.width.default}",
+        "color": "{semantic.color.status.info.border}"
+      }
+    },
+
+    "selection": {
+      "width": "{semantic.stroke.width.strong}",
+      "color": "{semantic.color.text.tint}"
+    }
+  }
+}
