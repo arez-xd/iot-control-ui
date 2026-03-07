@@ -27,13 +27,11 @@ sibach-design-system/
 │   │   ├── border.json
 │   │   └── elevation.json
 │   │
-│   └── build/                ← Auto-generated (never edit)
-│       ├── css/
-│       │   └── tokens.css
-│       ├── ts/
-│       │   └── tokens.ts
-│       └── ios/
-│           └── Tokens.swift
+│   └── build/                ← Auto-generated
+│       ├── ios/
+│       │   └── tokens.swift
+│       └── ts/
+│           └── tokens.ts
 │
 ├── docs/                     ← Documentation
 └── figma/                    ← Source tooling
