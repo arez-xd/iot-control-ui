@@ -1,36 +1,15 @@
 {
   "size": {
-    "hitArea": {
-      "min": "44px"
-    },
-
-    "control": {
-      "height": {
-        "default": "44px",
-        "compact": "36px"
-      }
-    },
-
-    "chip": {
-      "height": "28px"
-    },
-
-    "icon": {
-      "xs": "12px",
-      "sm": "16px",
-      "md": "20px",
-      "lg": "24px",
-      "xl": "32px"
-    },
-
-    "avatar": {
-      "sm": "28px",
-      "md": "36px",
-      "lg": "44px"
-    },
-
-    "divider": {
-      "hairline": "1px"
-    }
+    "12": { "$value": "12px", "$type": "dimension" },
+    "16": { "$value": "16px", "$type": "dimension" },
+    "20": { "$value": "20px", "$type": "dimension" },
+    "24": { "$value": "24px", "$type": "dimension" },
+    "28": { "$value": "28px", "$type": "dimension" },
+    "32": { "$value": "32px", "$type": "dimension" },
+    "36": { "$value": "36px", "$type": "dimension" },
+    "40": { "$value": "40px", "$type": "dimension" },
+    "44": { "$value": "44px", "$type": "dimension" },
+    "48": { "$value": "48px", "$type": "dimension" },
+    "56": { "$value": "56px", "$type": "dimension" }
   }
 }
