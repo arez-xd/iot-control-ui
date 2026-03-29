@@ -1,11 +1,116 @@
 {
   "border": {
-    "width": {
-      "default": "{core.border.width.thin}",
-      "strong": "{core.border.width.medium}"
+    "separator": {
+      "default": {
+        "width": {
+          "$value": "{stroke.width.hairline}",
+          "$type": "dimension"
+        },
+        "color": {
+          "$value": "{color.border.subtle}",
+          "$type": "color"
+        }
+      },
+      "strong": {
+        "width": {
+          "$value": "{stroke.width.default}",
+          "$type": "dimension"
+        },
+        "color": {
+          "$value": "{color.border.strong}",
+          "$type": "color"
+        }
+      }
     },
-    "style": {
-      "default": "{core.border.style.solid}"
+
+    "control": {
+      "default": {
+        "width": {
+          "$value": "{stroke.width.default}",
+          "$type": "dimension"
+        },
+        "color": {
+          "$value": "{color.border.default}",
+          "$type": "color"
+        }
+      },
+      "focused": {
+        "width": {
+          "$value": "{stroke.width.default}",
+          "$type": "dimension"
+        },
+        "color": {
+          "$value": "{color.border.focus}",
+          "$type": "color"
+        }
+      },
+      "disabled": {
+        "width": {
+          "$value": "{stroke.width.default}",
+          "$type": "dimension"
+        },
+        "color": {
+          "$value": "{color.border.disabled}",
+          "$type": "color"
+        }
+      }
+    },
+
+    "status": {
+      "success": {
+        "width": {
+          "$value": "{stroke.width.default}",
+          "$type": "dimension"
+        },
+        "color": {
+          "$value": "{color.status.success.border}",
+          "$type": "color"
+        }
+      },
+      "warning": {
+        "width": {
+          "$value": "{stroke.width.default}",
+          "$type": "dimension"
+        },
+        "color": {
+          "$value": "{color.status.warning.border}",
+          "$type": "color"
+        }
+      },
+      "error": {
+        "width": {
+          "$value": "{stroke.width.default}",
+          "$type": "dimension"
+        },
+        "color": {
+          "$value": "{color.status.error.border}",
+          "$type": "color"
+        }
+      }
+    },
+
+    "selection": {
+      "width": {
+        "$value": "{stroke.width.strong}",
+        "$type": "dimension"
+      },
+      "color": {
+        "$value": "{color.interactive.primary.default}",
+        "$type": "color"
+      }
+    },
+
+    "focus": {
+      "ring": {
+        "width": {
+          "$value": "{stroke.width.strong}",
+          "$type": "dimension"
+        },
+        "color": {
+          "$value": "{color.focus.ring}",
+          "$type": "color"
+        }
+      }
     }
   }
 }
