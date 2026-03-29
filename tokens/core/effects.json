@@ -1,0 +1,34 @@
+{
+  "effects": {
+    "shadow": {
+      "1": {
+        "$type": "shadow",
+        "$value": {
+          "color": "rgba(0,0,0,0.24)",
+          "offsetX": "0px",
+          "offsetY": "2px",
+          "blur": "6px",
+          "spread": "0px"
+        }
+      }
+    },
+    "highlight": {
+      "1": {
+        "$type": "shadow",
+        "$value": {
+          "color": "rgba(255,255,255,0.08)",
+          "offsetX": "0px",
+          "offsetY": "1px",
+          "blur": "0px",
+          "spread": "0px"
+        }
+      }
+    },
+    "scrim": {
+      "modal": {
+        "$value": "rgba(0,0,0,0.60)",
+        "$type": "color"
+      }
+    }
+  }
+}
