@@ -1,35 +1,70 @@
 {
   "space": {
     "inset": {
-      "screen": "{core.space.6}",
-      "sheet": "{core.space.6}",
-      "card": "{core.space.5}",
-      "cell": "{core.space.4}"
+      "xs": { "$value": "{space.8}", "$type": "dimension" },
+      "sm": { "$value": "{space.12}", "$type": "dimension" },
+      "md": { "$value": "{space.16}", "$type": "dimension" },
+      "lg": { "$value": "{space.24}", "$type": "dimension" },
+      "xl": { "$value": "{space.32}", "$type": "dimension" },
+
+      "control": { "$value": "{space.12}", "$type": "dimension" },
+      "card": { "$value": "{space.16}", "$type": "dimension" },
+      "panel": { "$value": "{space.24}", "$type": "dimension" }
     },
+
     "stack": {
-      "xs": "{core.space.2}",
-      "sm": "{core.space.3}",
-      "md": "{core.space.4}",
-      "lg": "{core.space.5}"
+      "xs": { "$value": "{space.4}", "$type": "dimension" },
+      "sm": { "$value": "{space.8}", "$type": "dimension" },
+      "md": { "$value": "{space.12}", "$type": "dimension" },
+      "lg": { "$value": "{space.16}", "$type": "dimension" },
+      "xl": { "$value": "{space.24}", "$type": "dimension" },
+      "2xl": { "$value": "{space.32}", "$type": "dimension" }
     },
-    "list": {
-      "rowGap": "{core.space.3}",
-      "sectionGap": "{core.space.6}"
+
+    "cluster": {
+      "xs": { "$value": "{space.4}", "$type": "dimension" },
+      "sm": { "$value": "{space.8}", "$type": "dimension" },
+      "md": { "$value": "{space.12}", "$type": "dimension" },
+      "lg": { "$value": "{space.16}", "$type": "dimension" }
     },
+
+    "section": {
+      "sm": { "$value": "{space.24}", "$type": "dimension" },
+      "md": { "$value": "{space.32}", "$type": "dimension" },
+      "lg": { "$value": "{space.40}", "$type": "dimension" }
+    },
+
     "control": {
-      "paddingX": "{core.space.4}",
-      "paddingY": "{core.space.3}",
-      "gap": "{core.space.2}"
+      "padding": {
+        "x": { "$value": "{space.16}", "$type": "dimension" },
+        "y": { "$value": "{space.8}", "$type": "dimension" }
+      },
+
+      "gap": {
+        "sm": { "$value": "{space.8}", "$type": "dimension" },
+        "md": { "$value": "{space.12}", "$type": "dimension" }
+      }
     },
-    "chip": {
-      "paddingX": "{core.space.4}",
-      "paddingY": "{core.space.2}",
-      "gap": "{core.space.2}"
+
+    "field": {
+      "padding": {
+        "x": { "$value": "{space.12}", "$type": "dimension" },
+        "y": { "$value": "{space.8}", "$type": "dimension" }
+      }
     },
-    "icon": {
-      "sm": "{core.space.4}",
-      "md": "{core.space.5}",
-      "lg": "{core.space.6}"
+
+    "list": {
+      "item": {
+        "gap": { "$value": "{space.12}", "$type": "dimension" },
+        "padding": {
+          "x": { "$value": "{space.16}", "$type": "dimension" },
+          "y": { "$value": "{space.12}", "$type": "dimension" }
+        }
+      },
+
+      "section": {
+        "gap": { "$value": "{space.24}", "$type": "dimension" }
+      }
     }
   }
 }
