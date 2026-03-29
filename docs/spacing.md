@@ -4,114 +4,87 @@
 
 ## The 4pt grid
 
-All spacing values are multiples of 4px. This aligns with iOS point system (1pt = 1px at 1x) and provides sufficient granularity without micro-adjustments.
+All spacing values are multiples of 4px, aligning with iOS point system.
 
 ### Core scale
 
 | Token | Value | Token | Value | Token | Value |
 |-------|-------|-------|-------|-------|-------|
-| `0` | 0px | `1` | 4px | `2` | 8px |
-| `3` | 12px | `4` | 16px | `5` | 20px |
-| `6` | 24px | `7` | 32px | `8` | 40px |
-| `9` | 48px | `10` | 64px | `11` | 80px |
+| `space.0` | 0px | `space.4` | 4px | `space.8` | 8px |
+| `space.12` | 12px | `space.16` | 16px | `space.20` | 20px |
+| `space.24` | 24px | `space.32` | 32px | `space.40` | 40px |
+| `space.48` | 48px | `space.64` | 64px | `space.80` | 80px |
+| `space.96` | 96px | | | | |
 
-**These are design-system internal.** Components use semantic spacing roles instead.
-
-### Why 4pt, not 8pt?
-
-We tested 8pt grid initially. Too coarse — couldn't express subtle differences between "tight" and "comfortable" padding.
-
-**8pt problems:**
-* Card padding: 16px felt cramped, 24px too spacious
-* Button to field gap: needed 12px, forced to choose 8px or 16px
-* Icon to label: wanted 8px, compromised readability
-
-**4pt solution:**
-* Enough granularity: 8, 12, 16, 20, 24 all available
-* iOS-native: aligns with Apple's point system
-* Clean ratios: 8:16, 12:24, 16:32 = 1:2
-
-### Natural ratios
-
-The 4pt scale produces intuitive proportions:
-
-```
-8px : 16px = 1:2    (compact → comfortable)
-12px : 24px = 1:2   (card → screen margin)
-16px : 32px = 1:2   (cell → section gap)
-20px : 40px = 1:2   (card → full bleed)
-```
-
-These ratios feel harmonious without calculation.
+Core tokens are design-system internal. Components use semantic roles.
 
 ## Semantic spacing roles
 
-Components reference these, not core tokens.
+### Insets — container padding
 
-### Insets (container padding)
+| Token | Value | Usage |
+|-------|-------|-------|
+| `space.inset.xs` | 8px | Compact elements, chips |
+| `space.inset.sm` | 12px | Tight containers |
+| `space.inset.md` | 16px | Standard cells, list rows |
+| `space.inset.lg` | 24px | Screen margins, panels |
+| `space.inset.xl` | 32px | Large containers |
+| `space.inset.control` | 12px | Button / control padding |
+| `space.inset.card` | 16px | Card interior padding |
+| `space.inset.panel` | 24px | Panel / sheet interior |
 
-| Role | Value | Usage |
-|------|-------|-------|
-| `screen` | 24px | Full-screen horizontal margins |
-| `sheet` | 24px | Modal/sheet edge padding |
-| `card` | 20px | Card interior padding |
-| `cell` | 16px | List row padding |
+### Stack — vertical rhythm
 
-**When to use:**
+| Token | Value | Usage |
+|-------|-------|-------|
+| `space.stack.xs` | 4px | Hairline gap, icon + badge |
+| `space.stack.sm` | 8px | Tightly related elements |
+| `space.stack.md` | 12px | Related groups |
+| `space.stack.lg` | 16px | Distinct sections |
+| `space.stack.xl` | 24px | Major content boundaries |
+| `space.stack.2xl` | 32px | Screen-level sections |
 
-`screen`: Top-level container, respects safe area  
-`sheet`: Bottom sheets, modals, floating panels  
-`card`: Content cards, grouped containers  
-`cell`: List items, table rows
+### Cluster — horizontal gap
 
-### Stack (vertical rhythm)
+| Token | Value | Usage |
+|-------|-------|-------|
+| `space.cluster.xs` | 4px | Icon + label (compact) |
+| `space.cluster.sm` | 8px | Icon + label (standard) |
+| `space.cluster.md` | 12px | Tag groups |
+| `space.cluster.lg` | 16px | Button groups |
 
-| Role | Value | Usage |
-|------|-------|-------|
-| `xs` | 8px | Tightly related elements |
-| `sm` | 12px | Related groups |
-| `md` | 16px | Distinct sections |
-| `lg` | 20px | Major boundaries |
+### Section — between content blocks
 
-**Real usage:**
+| Token | Value | Usage |
+|-------|-------|-------|
+| `space.section.sm` | 24px | Between related sections |
+| `space.section.md` | 32px | Between main sections |
+| `space.section.lg` | 40px | Between major screen areas |
 
-`xs`: Label → value, icon → text  
-`sm`: Form fields in a group  
-`md`: Card sections, list groups  
-`lg`: Major content boundaries
+### Control — button and input internals
 
-### List
+| Token | Value | Usage |
+|-------|-------|-------|
+| `space.control.padding.x` | 16px | Horizontal button padding |
+| `space.control.padding.y` | 8px | Vertical button padding |
+| `space.control.gap.sm` | 8px | Icon to label (compact) |
+| `space.control.gap.md` | 12px | Icon to label (standard) |
 
-| Role | Value | Usage |
-|------|-------|-------|
-| `rowGap` | 12px | Between list items |
-| `sectionGap` | 24px | Between list sections |
+### Field — form input internals
 
-### Control
+| Token | Value | Usage |
+|-------|-------|-------|
+| `space.field.padding.x` | 12px | Horizontal field padding |
+| `space.field.padding.y` | 8px | Vertical field padding |
 
-| Role | Value | Usage |
-|------|-------|-------|
-| `paddingX` | 16px | Button/field horizontal padding |
-| `paddingY` | 12px | Button/field vertical padding |
-| `gap` | 8px | Icon to label spacing |
+### List — list item spacing
 
-### Chip
-
-| Role | Value | Usage |
-|------|-------|-------|
-| `paddingX` | 16px | Chip horizontal padding |
-| `paddingY` | 8px | Chip vertical padding |
-| `gap` | 8px | Icon to label in chip |
-
-### Icon
-
-| Role | Value | Usage |
-|------|-------|-------|
-| `sm` | 16px | Small icon frame |
-| `md` | 20px | Standard icon frame |
-| `lg` | 24px | Large icon frame |
-
-Icon frames provide consistent tap targets even when icon glyph is smaller.
+| Token | Value | Usage |
+|-------|-------|-------|
+| `space.list.item.gap` | 12px | Between list items |
+| `space.list.item.padding.x` | 16px | List item horizontal padding |
+| `space.list.item.padding.y` | 12px | List item vertical padding |
+| `space.list.section.gap` | 24px | Between list sections |
 
 ## Layout patterns
 
@@ -119,354 +92,208 @@ Icon frames provide consistent tap targets even when icon glyph is smaller.
 
 ```swift
 VStack(spacing: 0) {
-  // Navigation bar
-  
   ScrollView {
-    VStack(alignment: .leading, spacing: DS.Space.Stack.lg) {
+    VStack(alignment: .leading, spacing: DS.Space.Section.md) {
       // Section 1
-      VStack(alignment: .leading, spacing: DS.Space.Stack.md) {
+      VStack(alignment: .leading, spacing: DS.Space.Stack.lg) {
         Text("Section Header")
           .font(DS.Typography.Role.title2())
-        
-        // Cards
-        VStack(spacing: DS.Space.Stack.sm) {
+
+        VStack(spacing: DS.Space.Stack.md) {
           CardView()
           CardView()
         }
       }
-      
-      // Section 2
-      VStack(alignment: .leading, spacing: DS.Space.Stack.md) {
-        Text("Another Section")
-          .font(DS.Typography.Role.title2())
-        
-        CardView()
-      }
     }
-    .padding(.horizontal, DS.Space.Inset.screen)
-    .padding(.vertical, DS.Space.Stack.lg)
+    .padding(.horizontal, DS.Space.Inset.lg)
+    .padding(.vertical, DS.Space.Stack.xl)
   }
 }
 ```
 
-**Hierarchy:**
-* Between sections: `stack.lg` (20px)
-* Within section: `stack.md` (16px)
-* Between cards: `stack.sm` (12px)
-* Screen edges: `inset.screen` (24px)
+**Hierarchy:** between sections `section.md` (32px) · within section `stack.lg` (16px) · between cards `stack.md` (12px) · screen edges `inset.lg` (24px)
 
 ### Card layout
 
 ```swift
-VStack(alignment: .leading, spacing: DS.Space.Stack.sm) {
-  // Header
-  Text("Transaction Details")
+VStack(alignment: .leading, spacing: DS.Space.Stack.md) {
+  Text("Sensor Group A")
     .font(DS.Typography.Role.headline())
-  
-  // Content
-  VStack(alignment: .leading, spacing: DS.Space.Stack.xs) {
+
+  VStack(alignment: .leading, spacing: DS.Space.Stack.sm) {
     HStack {
-      Text("Amount")
+      Text("Temperature")
         .foregroundColor(DS.Color.Text.secondary)
       Spacer()
-      Text("$123.45")
-        .foregroundColor(DS.Color.Text.primary)
+      Text("23.4 °C")
+        .font(DS.Typography.Role.numericMetric())
     }
-    
     HStack {
-      Text("Date")
+      Text("Humidity")
         .foregroundColor(DS.Color.Text.secondary)
       Spacer()
-      Text("Jan 15, 2024")
-        .foregroundColor(DS.Color.Text.primary)
+      Text("61%")
+        .font(DS.Typography.Role.numericMetric())
     }
   }
 }
 .padding(DS.Space.Inset.card)
-.background(DS.Color.Background.surface)
+.background(DS.Color.Bg.Surface.base)
 .cornerRadius(DS.Radius.card)
 ```
 
-**Hierarchy:**
-* Card edge to content: `inset.card` (20px)
-* Header to content: `stack.sm` (12px)
-* Between rows: `stack.xs` (8px)
+**Hierarchy:** card edge `inset.card` (16px) · header to rows `stack.md` (12px) · between rows `stack.sm` (8px)
 
 ### List layout
 
 ```swift
-VStack(spacing: DS.Space.List.rowGap) {
-  ForEach(items) { item in
-    HStack(spacing: DS.Space.Control.gap) {
-      Image(systemName: item.icon)
-        .frame(width: DS.Space.Icon.md, height: DS.Space.Icon.md)
-      
+VStack(spacing: DS.Space.List.Item.gap) {
+  ForEach(devices) { device in
+    HStack(spacing: DS.Space.Cluster.sm) {
+      StatusDot(color: device.statusColor)
+        .frame(width: DS.Size.Icon.sm, height: DS.Size.Icon.sm)
+
       VStack(alignment: .leading, spacing: DS.Space.Stack.xs) {
-        Text(item.title)
+        Text(device.name)
           .font(DS.Typography.Role.callout())
-        Text(item.subtitle)
-          .font(DS.Typography.Role.footnote())
+        Text(device.location)
+          .font(DS.Typography.Role.subhead())
           .foregroundColor(DS.Color.Text.tertiary)
       }
-      
+
       Spacer()
-      
-      Image(systemName: "chevron.right")
-        .foregroundColor(DS.Color.Icon.tertiary)
+
+      Text(device.lastSeen)
+        .font(DS.Typography.Role.caption())
+        .foregroundColor(DS.Color.Text.tertiary)
     }
-    .padding(DS.Space.Inset.cell)
-    .background(DS.Color.Background.surface)
-    .cornerRadius(DS.Radius.card)
+    .padding(.horizontal, DS.Space.List.Item.Padding.x)
+    .padding(.vertical, DS.Space.List.Item.Padding.y)
   }
 }
 ```
 
-**Hierarchy:**
-* Between rows: `list.rowGap` (12px)
-* Cell edge to content: `inset.cell` (16px)
-* Icon to text: `control.gap` (8px)
-* Title to subtitle: `stack.xs` (8px)
-
-### Button layout
+### Control (button) layout
 
 ```swift
 Button {
   // action
 } label: {
-  HStack(spacing: DS.Space.Control.gap) {
+  HStack(spacing: DS.Space.Control.Gap.sm) {
     Image(systemName: "plus")
-    Text("Add Transaction")
+    Text("Add Device")
   }
-  .padding(.horizontal, DS.Space.Control.paddingX)
-  .padding(.vertical, DS.Space.Control.paddingY)
-  .frame(minHeight: DS.Size.Control.minHeight)
+  .padding(.horizontal, DS.Space.Control.Padding.x)
+  .padding(.vertical, DS.Space.Control.Padding.y)
+  .frame(minHeight: DS.Size.Control.Height.default)
 }
-.background(DS.Color.Control.Primary.background)
-.cornerRadius(DS.Radius.control)
 ```
 
-**Structure:**
-* Icon to label: `control.gap` (8px)
-* Horizontal padding: `control.paddingX` (16px)
-* Vertical padding: `control.paddingY` (12px)
-* Minimum height: 44px (accessibility)
-
-## Decision tree: which spacing?
+## Decision tree
 
 ```
 Container padding?
-  Full-screen → inset.screen (24px)
-  Modal/sheet → inset.sheet (24px)
-  Card interior → inset.card (20px)
-  List row → inset.cell (16px)
+  Screen edges              → inset.lg (24px)
+  Card interior             → inset.card (16px)
+  Panel / sheet             → inset.panel (24px)
+  Button / control          → inset.control (12px)
+  Compact element / chip    → inset.xs (8px)
 
-Vertical spacing between elements?
-  Tightly related (label→value) → stack.xs (8px)
-  Related group (form fields) → stack.sm (12px)
-  Distinct sections → stack.md (16px)
-  Major boundaries → stack.lg (20px)
+Vertical spacing?
+  Hairline / icon+badge     → stack.xs (4px)
+  Icon to label             → stack.sm (8px)
+  Form fields in group      → stack.md (12px)
+  Distinct sections         → stack.lg (16px)
+  Major boundaries          → stack.xl (24px)
+  Screen-level sections     → stack.2xl (32px)
 
-List spacing?
-  Between items → list.rowGap (12px)
-  Between sections → list.sectionGap (24px)
+Horizontal gap?
+  Icon + label (compact)    → cluster.xs (4px)
+  Icon + label (standard)   → cluster.sm (8px)
+  Tag groups                → cluster.md (12px)
+  Button groups             → cluster.lg (16px)
 
-Button/field?
-  Horizontal padding → control.paddingX (16px)
-  Vertical padding → control.paddingY (12px)
-  Icon to label → control.gap (8px)
+Between content blocks?
+  Related sections          → section.sm (24px)
+  Main sections             → section.md (32px)
+  Major screen areas        → section.lg (40px)
 
-Icon frame?
-  Small → icon.sm (16px)
-  Standard → icon.md (20px)
-  Large → icon.lg (24px)
+Button / input internals?
+  Padding X                 → control.padding.x (16px)
+  Padding Y                 → control.padding.y (8px)
+  Icon to label             → control.gap.sm (8px) or control.gap.md (12px)
+
+List?
+  Between items             → list.item.gap (12px)
+  Item padding X            → list.item.padding.x (16px)
+  Item padding Y            → list.item.padding.y (12px)
+  Between sections          → list.section.gap (24px)
 ```
-
-## Common patterns
-
-### Form spacing
-
-```swift
-VStack(spacing: DS.Space.Stack.sm) {
-  // Field 1
-  VStack(alignment: .leading, spacing: DS.Space.Stack.xs) {
-    Text("Email")
-      .font(DS.Typography.Role.subheadline())
-    TextField("email@example.com", text: $email)
-  }
-  
-  // Field 2
-  VStack(alignment: .leading, spacing: DS.Space.Stack.xs) {
-    Text("Password")
-      .font(DS.Typography.Role.subheadline())
-    SecureField("••••••••", text: $password)
-  }
-}
-```
-
-* Between fields: `stack.sm` (12px)
-* Label to input: `stack.xs` (8px)
-
-### Status banner spacing
-
-```swift
-HStack(spacing: DS.Space.Control.gap) {
-  Image(systemName: "checkmark.circle.fill")
-  Text("Payment successful")
-}
-.padding(DS.Space.Inset.card)
-.background(DS.Color.Status.Success.surface)
-```
-
-* Icon to text: `control.gap` (8px)
-* Banner padding: `inset.card` (20px)
-
-### Metric card spacing
-
-```swift
-VStack(alignment: .leading, spacing: DS.Space.Stack.xs) {
-  Text("$12.4M")
-    .font(DS.Typography.Role.numericMetric())
-  Text("REVENUE")
-    .font(DS.Typography.Role.caption1())
-}
-.padding(DS.Space.Inset.card)
-```
-
-* Value to label: `stack.xs` (8px)
-* Card padding: `inset.card` (20px)
 
 ## Common mistakes
 
-### Using arbitrary values
-
+**Arbitrary values:**
 ```swift
 // Wrong
 VStack(spacing: 14)
 .padding(18)
 
 // Correct
-VStack(spacing: DS.Space.Stack.sm)
+VStack(spacing: DS.Space.Stack.md)
 .padding(DS.Space.Inset.card)
 ```
 
-### Using core tokens
-
+**Using core tokens directly:**
 ```swift
 // Wrong
-.padding(DS.Core.Space.s5)
+.padding(DS.Core.Space.s16)
 
 // Correct
 .padding(DS.Space.Inset.card)
 ```
 
-### Inconsistent spacing
-
+**Mixing patterns:**
 ```swift
-// Wrong - mixing patterns
+// Wrong
 VStack(spacing: 12) {
-  CardView()
-    .padding(18)
-  CardView()
-    .padding(20)
+  CardView().padding(18)
+  CardView().padding(16)
 }
 
-// Correct - systematic
-VStack(spacing: DS.Space.Stack.sm) {
-  CardView()
-    .padding(DS.Space.Inset.card)
-  CardView()
-    .padding(DS.Space.Inset.card)
-}
-```
-
-### Over-nesting
-
-```swift
-// Wrong - unnecessary nesting
+// Correct
 VStack(spacing: DS.Space.Stack.md) {
-  VStack(spacing: DS.Space.Stack.xs) {
-    Text("Title")
-  }
-}
-
-// Correct - flatten when possible
-VStack(spacing: DS.Space.Stack.xs) {
-  Text("Title")
+  CardView().padding(DS.Space.Inset.card)
+  CardView().padding(DS.Space.Inset.card)
 }
 ```
 
 ## Composing spacing
 
-Sometimes you need values between semantic tokens. Composition is acceptable:
+For one-off values between semantic tokens:
 
 ```swift
-// Need 28px (between sm:12 and md:16)
+// Need something between stack.sm (8) and stack.md (12)
 let customSpacing = DS.Space.Stack.sm + DS.Space.Stack.xs
-VStack(spacing: customSpacing) {
-  // content
-}
 ```
 
-**When to compose:**
-* One-off spacing needs
-* Experimental layouts
-* Complex interactions
+**When to add a new token:** pattern used 3+ times and has clear semantic meaning.
 
-**When to add a token:**
-* Pattern used 3+ times
-* Has semantic meaning
-* Represents systematic concern
-
-## React Native implementation
+## React Native
 
 ```typescript
 import { tokens } from '@sibach/tokens';
 
 const styles = StyleSheet.create({
   screen: {
-    paddingHorizontal: tokens.space.inset.screen,
-    paddingVertical: tokens.space.stack.lg
+    paddingHorizontal: tokens.space.inset.lg,
   },
   card: {
     padding: tokens.space.inset.card,
-    marginBottom: tokens.space.stack.sm
   },
   row: {
-    flexDirection: 'row',
-    gap: tokens.space.control.gap,
-    padding: tokens.space.inset.cell
+    gap: tokens.space.cluster.sm,
+    paddingHorizontal: tokens.space.list.item.padding.x,
+    paddingVertical: tokens.space.list.item.padding.y
   }
 });
 ```
-
-## Why semantic spacing
-
-**Before semantic roles:**
-Engineers asked "should this be 16px or 20px?" for every padding decision.
-
-**With semantic roles:**
-Engineers ask "is this card padding or cell padding?" System provides appropriate value.
-
-**Example: changing card padding**
-
-Without roles:
-```swift
-// Change in 23 files
-.padding(20) → .padding(24)
-```
-
-With roles:
-```json
-// Change once
-"inset.card": "20px" → "24px"
-```
-
-All cards update automatically.
-
-## Performance notes
-
-**iOS:** Spacing constants compile to CGFloat. Zero runtime cost.
-
-**React Native:** Numeric values, no string parsing. Direct layout engine usage.
-
-See [Architecture](architecture.md) for implementation details and [Components](components.md) for usage patterns.
