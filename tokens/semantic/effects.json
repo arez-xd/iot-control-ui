@@ -1,0 +1,38 @@
+{
+  "effects": {
+    "shadow": {
+      "surface": {
+        "elevated": {
+          "$value": "{effects.shadow.1}",
+          "$type": "shadow"
+        },
+        "floating": {
+          "$value": "{effects.shadow.1}",
+          "$type": "shadow"
+        }
+      }
+    },
+
+    "highlight": {
+      "surface": {
+        "elevated": {
+          "$value": "{effects.highlight.1}",
+          "$type": "shadow"
+        },
+        "floating": {
+          "$value": "{effects.highlight.1}",
+          "$type": "shadow"
+        }
+      }
+    },
+
+    "overlay": {
+      "scrim": {
+        "modal": {
+          "$value": "{effects.scrim.modal}",
+          "$type": "color"
+        }
+      }
+    }
+  }
+}
