@@ -31,7 +31,10 @@
         "300": { "$value": "#6CE9A6", "$type": "color" },
         "400": { "$value": "#32D583", "$type": "color" },
         "500": { "$value": "#34C759", "$type": "color" },
-        "600": { "$value": "#28A745", "$type": "color" }
+        "600": { "$value": "#28A745", "$type": "color" },
+        "700": { "$value": "#1A7A32", "$type": "color" },
+        "800": { "$value": "#0F5221", "$type": "color" },
+        "900": { "$value": "#072D12", "$type": "color" }
       },
 
       "amber": {
@@ -40,7 +43,10 @@
         "300": { "$value": "#FFD27A", "$type": "color" },
         "400": { "$value": "#FFB84D", "$type": "color" },
         "500": { "$value": "#FF9F0A", "$type": "color" },
-        "600": { "$value": "#CC7F08", "$type": "color" }
+        "600": { "$value": "#CC7F08", "$type": "color" },
+        "700": { "$value": "#995F06", "$type": "color" },
+        "800": { "$value": "#664004", "$type": "color" },
+        "900": { "$value": "#332002", "$type": "color" }
       },
 
       "red": {
@@ -49,7 +55,10 @@
         "300": { "$value": "#FDA29B", "$type": "color" },
         "400": { "$value": "#F97066", "$type": "color" },
         "500": { "$value": "#FF453A", "$type": "color" },
-        "600": { "$value": "#D92D20", "$type": "color" }
+        "600": { "$value": "#D92D20", "$type": "color" },
+        "700": { "$value": "#A32218", "$type": "color" },
+        "800": { "$value": "#6E1710", "$type": "color" },
+        "900": { "$value": "#390C08", "$type": "color" }
       },
 
       "cyan": {
@@ -66,15 +75,15 @@
 
     "alpha": {
       "white": {
-        "5":  { "$value": "rgba(255,255,255,0.05)", "$type": "color" },
-        "10": { "$value": "rgba(255,255,255,0.10)", "$type": "color" },
-        "20": { "$value": "rgba(255,255,255,0.20)", "$type": "color" },
-        "40": { "$value": "rgba(255,255,255,0.40)", "$type": "color" },
-        "60": { "$value": "rgba(255,255,255,0.60)", "$type": "color" }
+        "5":  { "$value": "#FFFFFF0D", "$type": "color" },
+        "10": { "$value": "#FFFFFF1A", "$type": "color" },
+        "20": { "$value": "#FFFFFF33", "$type": "color" },
+        "40": { "$value": "#FFFFFF66", "$type": "color" },
+        "60": { "$value": "#FFFFFF99", "$type": "color" }
       },
       "black": {
-        "40": { "$value": "rgba(0,0,0,0.40)", "$type": "color" },
-        "60": { "$value": "rgba(0,0,0,0.60)", "$type": "color" }
+        "40": { "$value": "#00000066", "$type": "color" },
+        "60": { "$value": "#00000099", "$type": "color" }
       }
     },
 
