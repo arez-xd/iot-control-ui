@@ -1,9 +1,30 @@
 {
   "radius": {
-    "control": "{core.radius.control}",
-    "card": "{core.radius.card}",
-    "panel": "{core.radius.lg}",
-    "sheet": "{core.radius.xl}",
-    "pill": "{core.radius.full}"
+    "none": { "$value": "{radius.0}", "$type": "dimension" },
+
+    "control": {
+      "$value": "{radius.12}",
+      "$type": "dimension"
+    },
+
+    "field": {
+      "$value": "{radius.12}",
+      "$type": "dimension"
+    },
+
+    "card": {
+      "$value": "{radius.16}",
+      "$type": "dimension"
+    },
+
+    "panel": {
+      "$value": "{radius.24}",
+      "$type": "dimension"
+    },
+
+    "pill": {
+      "$value": "{radius.full}",
+      "$type": "dimension"
+    }
   }
 }
