@@ -1,14 +1,6 @@
 {
-  "border": {
-    "width": {
-      "none": "0px",
-      "thin": "1px",
-      "medium": "2px",
-      "thick": "3px"
-    },
-    "style": {
-      "solid": "solid",
-      "dashed": "dashed"
-    }
+  "borderStyle": {
+    "solid": { "$value": "solid", "$type": "strokeStyle" },
+    "dashed": { "$value": "dashed", "$type": "strokeStyle" }
   }
 }
