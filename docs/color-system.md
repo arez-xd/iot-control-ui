@@ -85,254 +85,243 @@ Transparent overlays for dark UI layering.
 
 **White alpha:**  
 `5`: rgba(255,255,255,0.05) · `10`: rgba(255,255,255,0.1) · `15`: rgba(255,255,255,0.15) · `20`: rgba(255,255,255,0.2) · `30`: rgba(255,255,255,0.3)
+# Color System
 
-**Black alpha:**  
-`10`: rgba(0,0,0,0.1) · `20`: rgba(0,0,0,0.2) · `30`: rgba(0,0,0,0.3) · `40`: rgba(0,0,0,0.4) · `60`: rgba(0,0,0,0.6)
+Hue-based core palettes with semantic role mappings for dark-first IoT UI.
 
-Alpha values work over any background without per-context color definitions.
+## Core palettes
+
+Seven hue families calibrated for dark-first display. All values in `tokens/core/color.json`.
+
+### Neutral
+
+Foundation for backgrounds, text, and UI structure.
+
+| Token | Value | Role |
+|-------|-------|------|
+| `neutral.0` | #FFFFFF | Primary text |
+| `neutral.50` | #F5F7FA | — |
+| `neutral.100` | #E8ECF2 | Secondary elements |
+| `neutral.200` | #D0D7E2 | Secondary text |
+| `neutral.300` | #AAB4C3 | — |
+| `neutral.400` | #7C8798 | Tertiary text, icons |
+| `neutral.500` | #5C6675 | Disabled states |
+| `neutral.600` | #434C59 | Overlay surfaces |
+| `neutral.700` | #2E3640 | Elevated surfaces |
+| `neutral.800` | #1C222A | Card surfaces |
+| `neutral.900` | #0F1318 | Canvas background |
+
+Scale logic: 0–200 for foreground (text, icons), 600–900 for backgrounds.
+
+### Blue — Primary interactive
+
+| Token | Value | Usage |
+|-------|-------|-------|
+| `blue.500` | #007AFF | Primary actions, focus ring |
+| `blue.600` | #005FCC | Pressed state |
+| `blue.700` | #004799 | — |
+
+### Green — Success
+
+| Token | Value | Usage |
+|-------|-------|-------|
+| `green.100` | #D1FADF | — |
+| `green.400` | #32D583 | — |
+| `green.500` | #34C759 | Success foreground |
+| `green.600` | #28A745 | — |
+| `green.700` | #1A7A32 | Success border |
+| `green.800` | #0F5221 | — |
+| `green.900` | #072D12 | Success surface |
+
+### Amber — Warning
+
+| Token | Value | Usage |
+|-------|-------|-------|
+| `amber.500` | #FF9F0A | Warning foreground |
+| `amber.600` | #CC7F08 | — |
+| `amber.700` | #995F06 | Warning border |
+| `amber.800` | #664004 | — |
+| `amber.900` | #332002 | Warning surface |
+
+### Red — Error / Destructive
+
+| Token | Value | Usage |
+|-------|-------|-------|
+| `red.500` | #FF453A | Error fg, destructive actions |
+| `red.600` | #D92D20 | Pressed destructive |
+| `red.700` | #A32218 | Error border |
+| `red.800` | #6E1710 | — |
+| `red.900` | #390C08 | Error surface |
+
+### Cyan — Data emphasis
+
+| Token | Value | Usage |
+|-------|-------|-------|
+| `cyan.400` | #22D3EE | — |
+| `cyan.500` | #00F2FF | Data series 2 |
+| `cyan.600` | #0EA5B7 | — |
+
+### Purple — Accent
+
+| Token | Value | Usage |
+|-------|-------|-------|
+| `purple.500` | #7C3AED | Accent, premium features |
+| `purple.600` | #5B21B6 | — |
+
+### Alpha layers
+
+Transparent overlays for dark UI layering.
+
+| Token | Value |
+|-------|-------|
+| `alpha.white.5` | #FFFFFF0D |
+| `alpha.white.10` | #FFFFFF1A |
+| `alpha.white.20` | #FFFFFF33 |
+| `alpha.white.40` | #FFFFFF66 |
+| `alpha.white.60` | #FFFFFF99 |
+| `alpha.black.40` | #00000066 |
+| `alpha.black.60` | #00000099 |
+
+Alpha values adapt to any surface without per-context color definitions.
 
 ## Semantic color roles
 
-Semantic tokens map core hues to UI purposes. Components consume these, never core tokens directly.
-
-### Text hierarchy
-
-| Role | Hex | Core Reference | Usage |
-|------|-----|----------------|-------|
-| `primary` | #F2F4F7 | neutral.100 | Headlines, main content |
-| `secondary` | #CBD5E1 | neutral.300 | Body text, descriptions |
-| `tertiary` | #64748B | neutral.500 | Metadata, timestamps |
-| `disabled` | #475569 | neutral.600 | Unavailable states |
-| `tint` | #007AFF | blue.500 | Links, interactive text |
-| `destructive` | #FF453A | red.500 | Delete, remove actions |
-| `success` | #00F5A0 | green.500 | Success messaging |
-| `warning` | #FF9F0A | amber.500 | Warning messaging |
-| `info` | #00F2FF | cyan.500 | Info messaging |
-| `metric` | #F8FAFC | neutral.50 | Large dashboard numbers |
-| `metricUnit` | #007AFF | blue.500 | Metric labels |
-
-**Real usage:**
-
-Transaction list: Amount uses `text.primary`, timestamp uses `text.tertiary`  
-Settings row: Label uses `text.primary`, subtext uses `text.secondary`
-
-### Icon colors
-
-| Role | Hex | Usage |
-|------|-----|-------|
-| `primary` | #E4E7EC | Primary icons |
-| `secondary` | #94A3B8 | Supporting icons |
-| `tertiary` | #475569 | Decorative icons |
-| `tint` | #007AFF | Interactive icons |
-| `destructive` | #FF453A | Delete icons |
+Components always consume semantic tokens. Never use core tokens directly.
 
 ### Background
 
-All surfaces use the same base colors. Elevation is communicated through highlights and shadows, not color shifts.
+| Token | Value | Usage |
+|-------|-------|-------|
+| `color.bg.canvas` | #0F1318 | Screen background |
+| `color.bg.surface.base` | #1C222A | Cards, containers |
+| `color.bg.surface.grouped` | #2E3640 | Grouped lists |
+| `color.bg.surface.elevated` | #2E3640 | Floating elements |
+| `color.bg.surface.overlay` | #434C59 | Tooltips, overlays |
+| `color.bg.surface.modal` | #1C222A | Modal sheets |
 
-`canvas`: #0A0B0D (neutral.900) — Screen background  
-`surface`: #16181D (neutral.800) — Card background  
-`grouped`: #16181D (neutral.800) — Grouped list background  
-`elevated`: #16181D (neutral.800) — Modal/sheet background
+Elevation is communicated through highlights and shadows, not by lightening the surface color.
 
-### Separators
+### Text hierarchy
 
-`default`: rgba(255,255,255,0.1) (alpha.white.10) — Standard dividers  
-`strong`: rgba(255,255,255,0.15) (alpha.white.15) — Emphasized dividers
+| Token | Value | Usage |
+|-------|-------|-------|
+| `color.text.primary` | #FFFFFF | Headlines, main content |
+| `color.text.secondary` | #D0D7E2 | Body text, descriptions |
+| `color.text.tertiary` | #7C8798 | Metadata, timestamps |
+| `color.text.disabled` | #5C6675 | Unavailable states |
+| `color.text.inverse` | #000000 | Text on light surfaces |
 
-### Control states
+**Decision tree:**
+```
+Main content / headlines?  → text.primary
+Body copy / descriptions?  → text.secondary
+Metadata / timestamps?     → text.tertiary
+Disabled / unavailable?    → text.disabled
+On light surface?          → text.inverse
+```
 
-| Type | Background | Pressed | Text | Border |
-|------|------------|---------|------|--------|
-| **Primary** (high emphasis) | #007AFF | #0068D9 | #FFFFFF | — |
-| **Secondary** (medium emphasis) | rgba(255,255,255,0.05) | rgba(255,255,255,0.1) | #F2F4F7 | rgba(255,255,255,0.1) |
-| **Destructive** (irreversible actions) | #FF453A | #D93A31 | #FFFFFF | — |
-| **Disabled** | rgba(255,255,255,0.05) | — | #475569 | — |
+### Icon colors
 
-iOS pattern: No hover states. Pressed state provides tactile feedback.
+Icon colors mirror text hierarchy: `color.icon.{primary|secondary|tertiary|disabled|inverse}`
 
-### Form fields
+### Border
 
-`bg`: rgba(255,255,255,0.05) — Field background  
-`border`: rgba(255,255,255,0.1) — Default border  
-`borderFocused`: #007AFF — Focus indicator  
-`text`: #F2F4F7 — Input text  
-`placeholder`: #64748B — Placeholder text
+| Token | Value | Usage |
+|-------|-------|-------|
+| `color.border.subtle` | #FFFFFF0D | Hairline dividers |
+| `color.border.default` | #FFFFFF1A | Standard borders |
+| `color.border.strong` | #FFFFFF33 | Emphasized borders |
+| `color.border.focus` | #007AFF | Focus indicator |
+| `color.border.disabled` | #FFFFFF0D | Disabled borders |
 
-### Status system (3-part)
+### Interactive controls
 
-Each status has foreground, surface, and border for consistent treatment across banners, badges, and alerts.
+| Token | Background | Text | Pressed |
+|-------|------------|------|---------|
+| `interactive.primary` | #007AFF | inverse | #005FCC |
+| `interactive.secondary` | #FFFFFF0D | primary | #FFFFFF1A |
+| `interactive.destructive` | #FF453A | primary | #D92D20 |
 
-| Status | Foreground | Surface | Border |
-|--------|------------|---------|--------|
-| **Success** | #00F5A0 (green.500) | #006644 (green.900) | #00AA6F (green.700) |
-| **Warning** | #FF9F0A (amber.500) | #664004 (amber.900) | #B26F07 (amber.700) |
-| **Error** | #FF453A (red.500) | #661C17 (red.900) | #B23029 (red.700) |
-| **Info** | #00F2FF (cyan.500) | #00858C (cyan.900) | #00A9B2 (cyan.700) |
+Full paths: `color.interactive.{primary|secondary|destructive}.{default|pressed|disabled|text}`
 
-**Usage example:**
+No hover states — iOS uses pressed states for tactile feedback.
 
+### Status system
+
+Each status provides three tokens: foreground, surface, border. Use all three together.
+
+| Status | fg | bg (surface) | border |
+|--------|----|----|--------|
+| `success` | #34C759 | #072D12 | #1A7A32 |
+| `warning` | #FF9F0A | #332002 | #995F06 |
+| `error` | #FF453A | #390C08 | #A32218 |
+
+Full paths: `color.status.{success|warning|error}.{fg|bg|border}`
+
+**Usage:**
 ```swift
-// Error banner
-HStack {
+HStack(spacing: DS.Space.Cluster.sm) {
   Image(systemName: "exclamationmark.circle.fill")
-    .foregroundColor(DS.Color.Status.Error.foreground)
-  Text("Payment failed")
-    .foregroundColor(DS.Color.Status.Error.foreground)
+    .foregroundColor(DS.Color.Status.error.fg)
+  Text("Connection lost")
+    .font(DS.Typography.Role.callout())
+    .foregroundColor(DS.Color.Status.error.fg)
 }
 .padding(DS.Space.Inset.card)
-.background(DS.Color.Status.Error.surface)
+.background(DS.Color.Status.error.bg)
 .overlay(
   RoundedRectangle(cornerRadius: DS.Radius.control)
-    .stroke(DS.Color.Status.Error.border, lineWidth: 1)
+    .stroke(DS.Color.Status.error.border, lineWidth: 1)
 )
 ```
 
-## Data visualization
+**Don't use status colors for data visualization** — use series colors instead.
 
-Data colors are structurally separate from status colors to avoid semantic encoding.
+### Focus & overlay
 
-### Series colors
+`color.focus.ring` → #007AFF — consistent focus indicator for accessibility
 
-Eight colors optimized for perceptual distinction in dark UI, colorblind-safe combinations, and no inherent meaning.
+`color.overlay.scrim` → #00000099 — modal backdrop
 
-| Series | Hex | Hue |
-|--------|-----|-----|
-| 1 | #007AFF | Blue |
-| 2 | #00F2FF | Cyan |
-| 3 | #00F5A0 | Green |
-| 4 | #FF9F0A | Amber |
-| 5 | #8B5CF6 | Purple |
-| 6 | #5CBFD6 | Sky |
-| 7 | #94A3B8 | Gray |
-| 8 | #FF453A | Red |
+### Data visualization
 
-**Critical principle:** Don't encode "good" or "bad" in chart colors. Use `data.series.3` (happens to be green) without semantic meaning. A revenue line doesn't change color based on whether it's up or down — the axis communicates that.
+Four series colors for charts. No semantic meaning — don't encode "good/bad" with these.
 
-### Chart foundations
+| Token | Value |
+|-------|-------|
+| `color.data.series.1` | #007AFF |
+| `color.data.series.2` | #00F2FF |
+| `color.data.series.3` | #00F5A0 |
+| `color.data.series.4` | #FF9F0A |
 
-`grid`: rgba(255,255,255,0.1) — Subtle gridlines  
-`axis`: #64748B (neutral.500) — Axis labels, readable but not prominent
-
-**Design rules:**
-
-* Grid lines visible but don't compete with data
-* Axis labels use `text.secondary` for hierarchy
-* Data points use full-saturation series colors
-* Overlays (tooltips) use `elevation.floating` for depth
-
-### Metric display
-
-Large numbers in dashboards use specialized treatment:
-
-```swift
-Text("$1.2M")
-  .font(DS.Typography.Role.numericMetric())
-  .foregroundColor(DS.Color.Text.metric)
-
-Text("Revenue")
-  .font(DS.Typography.Role.caption1())
-  .foregroundColor(DS.Color.Text.metricUnit)
-```
-
-`numericMetric`: SF Mono 34px semibold (tabular figures prevent layout shift)  
-`text.metric`: Neutral.50 (brightest white for emphasis)  
-`text.metricUnit`: Blue.500 (tint color for label)
-
-This creates hierarchy: the number is primary, the label is supporting context.
+**Chart principle:** A sensor line doesn't change color based on whether the reading is in range or not. The axis and thresholds communicate that. Use fixed series colors.
 
 ## Implementation guidelines
 
-### Use semantic tokens exclusively
+### Always use semantic tokens
 
 ```swift
 // Correct
 .foregroundColor(DS.Color.Text.secondary)
-.background(DS.Color.Status.Success.surface)
+.background(DS.Color.Status.success.bg)
 
 // Wrong
-.foregroundColor(DS.Core.Color.Neutral.n300)
-.background(Color(hex: "#006644"))
-```
-
-### Text hierarchy decision tree
-
-```
-Main content / headlines?
-  → text.primary
-
-Body copy / descriptions?
-  → text.secondary
-
-Metadata / timestamps?
-  → text.tertiary
-
-Disabled / unavailable?
-  → text.disabled
-
-Interactive / link?
-  → text.tint
-
-Destructive action?
-  → text.destructive
+.foregroundColor(Color(hex: "#D0D7E2"))
+.background(DS.Color.Base.Green.n100)
 ```
 
 ### Status color usage
 
-**Use for:**
-* Alerts and banners
-* Status badges
-* Validation messages
-* System feedback
+**Use for:** alerts, banners, badges, validation messages, system feedback.
 
-**Don't use for:**
-* Data visualization (use series colors)
-* Decorative accents
-* Arbitrary emphasis
+**Don't use for:** data visualization, decorative accents, arbitrary emphasis.
 
-### Common mistakes
-
-**Using core tokens directly:**
+### Common mistake — status in charts
 
 ```swift
-// Wrong
-.foregroundColor(Color(hex: "#CBD5E1"))
+// Wrong — encodes "good" vs "bad" with semantic colors
+let lineColor = isInRange ? DS.Color.Status.success.fg : DS.Color.Status.error.fg
 
-// Correct
-.foregroundColor(DS.Color.Text.secondary)
+// Correct — neutral series color, threshold line shows range
+let lineColor = DS.Color.Data.series1
 ```
-
-**Encoding status in data colors:**
-
-```swift
-// Wrong - encodes "good" vs "bad" with colors
-let profitColor = profit > 0 ? DS.Color.Status.Success : DS.Color.Status.Error
-
-// Correct - use neutral series color
-let profitColor = DS.Color.Data.Series.one
-```
-
-## Why this structure
-
-**Hue-based core palettes** allow the same color to serve different purposes without coupling:
-
-```json
-// Same hue, different purposes
-"control.primary.bg": "{blue.500}",     // Interactive buttons
-"data.series.1": "{blue.500}",          // Chart color
-"text.tint": "{blue.500}"               // Link text
-```
-
-**Semantic separation** enables systematic remapping:
-
-```json
-// Default
-"status.error.fg": "{red.500}"
-
-// Colorblind mode
-"status.error.fg": "{amber.500}"
-```
-
-All error states update automatically without component changes.
-
-See [Principles](principles.md) for detailed reasoning and [Components](components.md) for implementation patterns.
