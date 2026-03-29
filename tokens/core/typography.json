@@ -16,9 +16,9 @@
       "34": { "$value": "34px", "$type": "fontSize" }
     },
     "lineHeight": {
-      "120": { "$value": "120%", "$type": "number" },
-      "130": { "$value": "130%", "$type": "number" },
-      "140": { "$value": "140%", "$type": "number" }
+      "120": { "$value": 1.2, "$type": "number" },
+      "130": { "$value": 1.3, "$type": "number" },
+      "140": { "$value": 1.4, "$type": "number" }
     },
     "fontWeight": {
       "400": { "$value": 400, "$type": "fontWeight" },
