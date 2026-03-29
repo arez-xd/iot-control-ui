@@ -1,59 +1,63 @@
 {
   "stroke": {
     "width": {
-      "hairline": "{core.stroke.width.hairline}",
-      "default": "{core.stroke.width.default}",
-      "strong": "{core.stroke.width.strong}"
+      "none": { "$value": "{stroke.0}", "$type": "dimension" },
+      "hairline": { "$value": "{stroke.1}", "$type": "dimension" },
+      "default": { "$value": "{stroke.1}", "$type": "dimension" },
+      "strong": { "$value": "{stroke.2}", "$type": "dimension" }
     },
 
     "separator": {
       "default": {
-        "width": "{semantic.stroke.width.hairline}",
-        "color": "{semantic.color.separator.default}"
+        "width": { "$value": "{stroke.width.hairline}", "$type": "dimension" },
+        "color": { "$value": "{color.border.subtle}", "$type": "color" }
       },
       "strong": {
-        "width": "{semantic.stroke.width.default}",
-        "color": "{semantic.color.separator.strong}"
+        "width": { "$value": "{stroke.width.default}", "$type": "dimension" },
+        "color": { "$value": "{color.border.strong}", "$type": "color" }
       }
     },
 
     "control": {
       "default": {
-        "width": "{semantic.stroke.width.default}",
-        "color": "{semantic.color.separator.default}"
+        "width": { "$value": "{stroke.width.default}", "$type": "dimension" },
+        "color": { "$value": "{color.border.default}", "$type": "color" }
       },
       "focused": {
-        "width": "{semantic.stroke.width.default}",
-        "color": "{semantic.color.field.borderFocused}"
+        "width": { "$value": "{stroke.width.default}", "$type": "dimension" },
+        "color": { "$value": "{color.border.focus}", "$type": "color" }
       },
       "disabled": {
-        "width": "{semantic.stroke.width.default}",
-        "color": "{semantic.color.text.disabled}"
+        "width": { "$value": "{stroke.width.default}", "$type": "dimension" },
+        "color": { "$value": "{color.border.disabled}", "$type": "color" }
       }
     },
 
     "status": {
       "success": {
-        "width": "{semantic.stroke.width.default}",
-        "color": "{semantic.color.status.success.border}"
+        "width": { "$value": "{stroke.width.default}", "$type": "dimension" },
+        "color": { "$value": "{color.status.success.border}", "$type": "color" }
       },
       "warning": {
-        "width": "{semantic.stroke.width.default}",
-        "color": "{semantic.color.status.warning.border}"
+        "width": { "$value": "{stroke.width.default}", "$type": "dimension" },
+        "color": { "$value": "{color.status.warning.border}", "$type": "color" }
       },
       "error": {
-        "width": "{semantic.stroke.width.default}",
-        "color": "{semantic.color.status.error.border}"
-      },
-      "info": {
-        "width": "{semantic.stroke.width.default}",
-        "color": "{semantic.color.status.info.border}"
+        "width": { "$value": "{stroke.width.default}", "$type": "dimension" },
+        "color": { "$value": "{color.status.error.border}", "$type": "color" }
       }
     },
 
     "selection": {
-      "width": "{semantic.stroke.width.strong}",
-      "color": "{semantic.color.text.tint}"
+      "width": { "$value": "{stroke.width.strong}", "$type": "dimension" },
+      "color": { "$value": "{color.interactive.primary.default}", "$type": "color" }
+    },
+
+    "focus": {
+      "ring": {
+        "width": { "$value": "{stroke.width.strong}", "$type": "dimension" },
+        "color": { "$value": "{color.focus.ring}", "$type": "color" }
+      }
     }
   }
 }
