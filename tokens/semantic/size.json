@@ -1,48 +1,51 @@
 {
   "size": {
     "hitArea": {
-      "min": "{core.size.hitArea.min}"
+      "min": { "$value": "{size.44}", "$type": "dimension" }
     },
 
     "control": {
-      "minHeight": "{core.size.control.height.default}",
-      "compactHeight": "{core.size.control.height.compact}"
-    },
-
-    "button": {
-      "minHeight": "{core.size.control.height.default}",
-      "compactHeight": "{core.size.control.height.compact}",
-      "iconOnly": {
-        "minSize": "{core.size.hitArea.min}"
+      "height": {
+        "compact": { "$value": "{size.36}", "$type": "dimension" },
+        "default": { "$value": "{size.44}", "$type": "dimension" },
+        "lg": { "$value": "{size.48}", "$type": "dimension" }
       }
     },
 
     "field": {
-      "minHeight": "{core.size.control.height.default}",
-      "compactHeight": "{core.size.control.height.compact}"
-    },
-
-    "chip": {
-      "height": "{core.size.chip.height}",
-      "minHeight": "{core.size.chip.height}"
+      "height": {
+        "default": { "$value": "{size.44}", "$type": "dimension" },
+        "lg": { "$value": "{size.48}", "$type": "dimension" }
+      }
     },
 
     "icon": {
-      "xs": "{core.size.icon.xs}",
-      "sm": "{core.size.icon.sm}",
-      "md": "{core.size.icon.md}",
-      "lg": "{core.size.icon.lg}",
-      "xl": "{core.size.icon.xl}"
+      "xs": { "$value": "{size.12}", "$type": "dimension" },
+      "sm": { "$value": "{size.16}", "$type": "dimension" },
+      "md": { "$value": "{size.20}", "$type": "dimension" },
+      "lg": { "$value": "{size.24}", "$type": "dimension" },
+      "xl": { "$value": "{size.32}", "$type": "dimension" }
     },
 
     "avatar": {
-      "sm": "{core.size.avatar.sm}",
-      "md": "{core.size.avatar.md}",
-      "lg": "{core.size.avatar.lg}"
+      "sm": { "$value": "{size.28}", "$type": "dimension" },
+      "md": { "$value": "{size.36}", "$type": "dimension" },
+      "lg": { "$value": "{size.44}", "$type": "dimension" }
     },
 
     "divider": {
-      "hairline": "{core.size.divider.hairline}"
+      "default": { "$value": "{stroke.1}", "$type": "dimension" },
+      "strong": { "$value": "{stroke.2}", "$type": "dimension" }
+    },
+
+    "button": {
+      "icon": {
+        "sm": { "$value": "{size.icon.sm}", "$type": "dimension" },
+        "md": { "$value": "{size.icon.md}", "$type": "dimension" }
+      },
+      "iconOnly": {
+        "min": { "$value": "{size.hitArea.min}", "$type": "dimension" }
+      }
     }
   }
 }
