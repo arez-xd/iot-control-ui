@@ -345,3 +345,10 @@ Token additions must meet these criteria:
 * **Has semantic meaning** — encodes a UI role, not an arbitrary value
 * **Cannot be composed** — existing tokens don't already solve the problem
 * **Likely to evolve** — represents a systematic concern
+
+## License
+
+The source code in this repository is licensed under the MIT License.
+
+Brand names, logos, product names, visual identity elements, screenshots, and case-study content are provided for demonstration purposes only and are not included in the MIT License.
+
